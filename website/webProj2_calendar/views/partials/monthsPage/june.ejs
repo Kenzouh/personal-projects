@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calendar | June</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Calendar Website" />
+    <meta name="keywords" content="Calendar, June" />
+    <meta name="author" content="Kenzo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta http-equiv="refresh" content="60" /-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/jpg" href="/img/calendar.jpg" />
+    <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+
+    <%- include('../header') %>
+
+    <section class="monthLeftSection">
+        <div class="calendarSpecific">
+            <div class="separateCalendarSpecific">
+                <nav>
+                    <a href="/calendar" class="home">🏠</a>
+                    <a href="july" class="nextMonthBtn"></a>
+                    <a href="may" class="previousMonthBtn"></a>
+                </nav>
+
+                <h1>June 2025</h1>
+
+                <ul class="days">
+                    <li>🌞<br>SU</li>
+                    <li>🌚<br>M</li>
+                    <li>🔥<br>T</li>
+                    <li>💧<br>W</li>
+                    <li>🌲<br>TH</li>
+                    <li>🪙<br>F</li>
+                    <li>🌏<br>SA</li>
+                </ul>
+        
+                <ul class="date">
+                    <li class="firstDay">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>  
+                    <li>6</li>
+                    <li class="holidayVisit"><a href="/calendar/june/eidAlAdha">7</a></li>
+                    <li class="holidayVisit"><a href="/calendar/june/eidAlAdhaDay2">8</a></li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li class="holidayVisit"><a href="/calendar/june/independenceDay">12</a></li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li class="holidayVisit"><a href="/calendar/june/juneSolstice">21</a></li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li class="holidayVisit"><a href="/calendar/june/amunJadid">27</a></li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li class="lastDay">30</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>  
+                </ul>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- =================================================================================================== -->
+
+    <section class="monthRightSection">
+        
+        <div class="tableContainerSpecificMonth">
+            <table class="holidayTableSpecificMonth">
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Holiday</th>
+                    <th>Type</th>
+                </tr>
+        
+                <tr>
+                    <td>June 7</td>
+                    <td>Saturday</td>
+                    <td><a href="/calendar/june/eidAlAdha">Eid al-Adha (Feast of the Sacrifice) (Tentative Date)</a></td>
+                    <td>Regular Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>June 8</td>
+                    <td>Sunday</td>
+                    <td><a href="/calendar/june/eidAlAdhaDay2">Eid al-Adha Day 2 (Tentative Date)</a></td>
+                    <td>Common Local Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>June 12</td>
+                    <td>Thursday</td>
+                    <td><a href="/calendar/june/independenceDay">Independence Day</a></td>
+                    <td>Regular Holiday</td>
+                </tr>
+                
+                <tr>
+                    <td>June 21</td>
+                    <td>Saturday</td>
+                    <td><a href="/calendar/june/juneSolstice">June Solstice</a></td>
+                    <td>Season</td>
+                </tr>
+        
+                <tr>
+                    <td>June 27</td>
+                    <td>Friday</td>
+                    <td><a href="/calendar/june/amunJadid">Amun Jadid (Tentative Date)</a></td>
+                    <td>Muslim, Common Local Holiday</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+</body>
+</html>
