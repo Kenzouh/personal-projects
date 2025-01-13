@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calendar | December</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Calendar Website" />
+    <meta name="keywords" content="Calendar, December" />
+    <meta name="author" content="Kenzo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta http-equiv="refresh" content="60" /-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/jpg" href="/img/calendar.jpg" />
+    <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+
+    <%- include('../header') %>
+
+    <section class="monthLeftSection">
+        <div class="calendarSpecific">
+            <div class="separateCalendarSpecific">
+                <nav>
+                    <a href="/calendar" class="home">🏠</a>
+                    <a href="" class="nextMonthBtn"></a>
+                    <a href="november" class="previousMonthBtn"></a>
+                </nav>
+
+                <h1>December 2025</h1>
+
+                <ul class="days">
+                    <li>🌞<br>SU</li>
+                    <li>🌚<br>M</li>
+                    <li>🔥<br>T</li>
+                    <li>💧<br>W</li>
+                    <li>🌲<br>TH</li>
+                    <li>🪙<br>F</li>
+                    <li>🌏<br>SA</li>
+                </ul>
+        
+                <ul class="date">
+                    <li class="previousMonth">30</li>
+                    <li class="firstDay">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>  
+                    <li>6</li>
+                    <li>7</li>
+                    <li class="holidayVisit"><a href="/calendar/december/feastOfTheImmaculateConception">8</a></li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li class="holidayVisit"><a href="/calendar/december/decemberSolstice">21</a></li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li class="holidayVisit"><a href="/calendar/december/christmasEve">24</a></li>
+                    <li class="holidayVisit"><a href="/calendar/december/christmas">25</a></li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li class="holidayVisit"><a href="/calendar/december/rizalDay">30</a></li>
+                    <li class="lastDay holidayVisit"><a href="/calendar/december/newYearsEve">31</a></li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- =================================================================================================== -->
+
+    <section class="monthRightSection">
+        
+        <div class="tableContainerSpecificMonth">
+            <table class="holidayTableSpecificMonth">
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Holiday</th>
+                    <th>Type</th>
+                </tr>
+        
+                <tr>
+                    <td>December 8</td>
+                    <td>Monday</td>
+                    <td><a href="/calendar/december/feastOfTheImmaculateConception">Feast of the Immaculate Conception</a></td>
+                    <td>Special Non-Working Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>December 21</td>
+                    <td>Sunday</td>
+                    <td><a href="/calendar/december/decemberSolstice">December Solstice</a></td>
+                    <td>Season</td>
+                </tr>
+        
+                <tr>
+                    <td>December 24</td>
+                    <td>Wednesday</td>
+                    <td><a href="/calendar/december/christmasEve">Christmas Eve</a></td>
+                    <td>Special Non-Working Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>December 25</td>
+                    <td>Thursday</td>
+                    <td><a href="/calendar/december/christmas">Christmas</a></td>
+                    <td>Regular Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>December 30</td>
+                    <td>Tuesday</td>
+                    <td><a href="/calendar/december/rizalDay">Rizal Day</a></td>
+                    <td>Regular Holiday</td>
+                </tr>
+        
+                <tr>
+                    <td>December 31</td>
+                    <td>Wednesday</td>
+                    <td><a href="/calendar/december/newYearsEve">New Year's Eve</a></td>
+                    <td>Special Non-Working Holiday</td>
+                </tr>
+        
+            </table>
+        </div>
+
+    </section>
+</body>
+</html>
