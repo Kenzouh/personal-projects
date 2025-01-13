@@ -1,0 +1,406 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e4d7ff; /*#f9ffdc*/
+}
+
+
+/* Banner */
+header{
+    background-color: #c5cfff;
+    text-align: center;
+    line-height: 80px; /*Positioning of the text*/
+    
+    top: 0;
+    
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px 1px 10px 0 hsla(0, 0.00%, 0.00%, 0.66);
+
+    position: fixed;
+
+    /* To overlap the contents below */
+    z-index: 5;
+}
+
+footer{
+    background-color: #c5cfff;
+    text-align: center;
+    line-height: 80px;
+
+    width: 100%;
+    height: 80px;
+    
+
+
+    box-shadow: 1px 1px 10px 0 hsla(0, 0.00%, 0.00%, 0.66);
+
+    clear: both;
+}
+
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.holidayTable{
+    background-color: #000000;
+    border: 2px solid #000000;
+    margin: 40px;
+}
+
+    .holidayTable th{
+        background-color: #ffb895;
+        font-size: 20px;
+        padding: 10px 5px;
+    }
+    .holidayTable td{
+        background-color: #ffef95;
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+        .holidayTable tr td:first-child{
+            color: #590000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+
+.tableContainerSpecificMonth{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 100px;
+    margin-botton: 100px;
+}
+.holidayTableSpecificMonth{
+    background-color: #000000;
+    border: 2px solid #000000;
+    margin: 40px;
+}
+
+    .holidayTableSpecificMonth th{
+        background-color: #ffb895;
+        font-size: 20px;
+        padding: 10px 5px;
+    }
+    .holidayTableSpecificMonth td{
+        background-color: #ffef95;
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+        .holidayTableSpecificMonth tr td:first-child{
+            color: #590000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+/* Grow Animation and Linking */
+
+.calendarComponentLink{
+    color: inherit; /* Despite being a link, it retains the color of its parent element. */
+    text-decoration: none;
+}
+    .calendarComponentLink:hover{
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    .calendarComponentLink:active .separateCalendar{
+        background-color: #d8daff;
+    }
+    
+
+    .calendarComponentLink:visited{
+        color: inherit;
+    }
+
+
+.calendar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 15vh auto;
+
+    width: 95%;
+    gap: 1rem; /* gap per component */
+}
+
+.separateCalendar{
+    background-color: #e5e6ff;
+
+    padding: 16px;
+                /* Black shadow = bottom and right     white shadow = top and left */
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2), -3px -3px 10px 0 #ffffff; 
+    
+    border: 1px solid #000000;
+    border-radius: 10px;
+    
+}
+    .separateCalendar h1{
+        text-align: center;
+        padding: 16px;
+    }
+
+    .separateCalendar ul{
+        display: grid;                  
+        list-style-type: none;  /*fr = fraction */
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+        .separateCalendar li{
+            padding: 5px;
+            text-align: center;
+        }
+                                       /* For Sunday */
+            .separateCalendar li:nth-child(7n + 1){
+                color: #d33e3e;
+            }
+                                        /* For Friday */
+            .separateCalendar li:nth-child(7n - 1){
+                color: #473be9;    
+            }
+
+/* ~ = every li that comes after .previousMonth */
+.previousMonth, .previousMonth ~ li{
+    opacity: .5; 
+    font-weight: 900;
+}
+
+.firstDay, .firstDay ~ li{
+    opacity: 1 !important; /*important = makes the first day highlighted as well*/
+    font-weight: 900;
+}
+
+.lastDay ~ li{
+    /*important = Similar to clear: both;*/
+    /*This makes sure it applies to ~li despite the .first-day~li properties above*/
+    opacity: .5 !important;
+    font-weight: 200;
+}
+
+.holiday{
+    background-color: #ffb3b3;
+    border-radius: 5px;
+}
+
+.holidayVisit{
+    background-color: #ffb3b3;
+    border-radius: 5px;
+}
+
+    .holidayVisit:hover{
+        background-color: #eaa4a4;
+        cursor: pointer;
+    }
+    .holidayVisit:active{
+        background-color: #e09797;
+        cursor: pointer;
+    }
+
+/*======================================= monthsPage folder =======================================*/
+
+.monthLeftSection{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    position: relative; /* Helps place the vertical line */
+}
+    /* Vertical Line */
+    .monthLeftSection::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #000000;
+    }
+
+.monthRightSection{
+    float: right;
+    width: 50%;
+    padding: 20px;
+}
+
+.home{
+    font-size: 25px;
+    display: inline-block; /* Helps in avoiding possible transform glitches */
+    transition: transform 0.2s ease-in-out;
+}
+    .home:hover{
+        transform: scale(1.2);
+    }
+    .home:active{
+        transform: scale(1.8);
+    }
+
+.previousMonthBtn, .nextMonthBtn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    float: right;
+}
+
+.previousMonthBtn::before, .nextMonthBtn::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    border-color: #5a0079;
+}
+
+.nextMonthBtn::before{ /* Review ::before pseudo-element */
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.previousMonthBtn::before{ /* Review ::before pseudo-element */
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.previousMonthBtn:hover::before, .nextMonthBtn:hover::before {
+    border-color: #000000;
+}
+
+
+
+
+
+.calendarSpecific{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    margin: 15vh auto;
+
+    /* width: 95%; */
+    gap: 1rem; /* gap per component */
+}
+
+.separateCalendarSpecific{
+    background-color: #e5e6ff;
+
+    padding: 20px;
+                /* Black shadow = bottom and right     white shadow = top and left */
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2), -3px -3px 10px 0 #ffffff; 
+    
+    border: 1px solid #000000;
+    border-radius: 10px;
+    
+}
+    .separateCalendarSpecific h1{
+        font-size: 40px;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .separateCalendarSpecific ul{
+        font-size: 20px;
+        display: grid;                  
+        list-style-type: none;  /*fr = fraction */
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+        .separateCalendarSpecific li{
+            padding: 15px;
+            text-align: center;
+        }
+                                       /* For Sunday */
+            .separateCalendarSpecific li:nth-child(7n + 1){
+                color: #d33e3e;
+            }
+                                        /* For Friday */
+            .separateCalendarSpecific li:nth-child(7n - 1){
+                color: #473be9;    
+            }
+
+
+.separateCalendarSpecific a{
+    text-decoration: none;
+}
+
+
+/*================== Images and Holidays Page ==================*/
+
+.homeIcon, .backBtn{
+    font-size: 25px;
+    display: inline-block; /* Helps in avoiding possible transform glitches */
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+
+    float: right;
+}
+    .homeIcon:hover, .backBtn:hover{
+        transform: scale(1.2);
+    }
+    .homeIcon:active, .backBtn:active{
+        transform: scale(1.8);
+    }
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    clear: both;
+}
+    .image{
+        width: 500px;
+        height: 300px;
+        border: 4px solid #000000;
+    }
+
+.imageTitle{
+    color: #a40000;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+    .imageDate{
+        color: #4c085b;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.holidayDefinition{
+    font-size: 25px;
+
+    text-indent: 20px;
+    text-align: justify;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.linkButton{
+    background-color: #c1ffb0;
+    color: #000000;
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+    .linkButton:hover{
+        background-color: #a5e494;
+    }
+    .linkButton:active{
+        background-color: #8dca7c;    
+    }
